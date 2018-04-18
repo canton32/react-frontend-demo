@@ -1,0 +1,318 @@
+.SelectWrapper {
+  @media (max-width: 768px) {
+    padding: 0px 20px;
+  }
+
+  .Description {
+    margin-top: 38px;
+    @media (max-width: 768px) {
+      margin-top: 20px;
+    }
+  }
+  .DescriptionImages {
+    .ImageWrapper {
+      max-width: 180px;
+      display: inline-block;
+      &:not(:last-child) {
+        padding: 12px;
+      }
+      .Image {
+        max-width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        img {
+          vertical-align: middle;
+          max-width: 100%;
+          height: 100%;
+        }
+
+        @media (max-width: 768px) {
+          max-width: 50px;
+          height: 50px;
+        }
+      }
+      > .Text {
+        font-size: 16px;
+        color: #000000;
+
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .Answers {
+    max-width: 591px;
+    margin: 0 auto;
+    margin-top: 62px;
+    @media (max-width: 768px) {
+      margin: 0px;
+      padding: 20px 10px 0px;
+      font-size: 13px;
+    }
+    &.DescriptionOnly {
+      margin-top: 52px;
+
+      @media (max-width: 768px) {
+        margin: 0px;
+      }
+    }
+    .Answer {
+      text-align: left;
+      border: 1px solid #EAEAEA;
+      box-sizing: border-box;
+      border-radius: 4px;
+      margin-bottom: 9px;
+      display: flex;
+      align-items: center;
+      padding: 15px 0px;
+      cursor: pointer;
+      @media (max-width: 768px) {
+        padding: 10px 0px;
+      }
+
+      > * {
+        float: right;
+      }
+      img {
+        padding: 0px 17px 0 22px;
+        fill: #D8D8D8;
+        float: left;
+        @media (max-width: 768px) {
+          padding: 0px 6px 0 10px;
+        }
+      }
+      .Text {
+        width: calc(100% - 60px);
+        @media (max-width: 768px) {
+          width: calc(100% - 40px);
+        }
+      }
+      &.Checked {
+        img {
+          fill: #1AD279;
+        }
+        .Text {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.MultipleSelectWrapper {
+  @media (max-width: 768px) {
+    padding: 0px 20px;
+  }
+
+  .Description {
+    margin-top: 15px;
+  }
+  .Items {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    @media (max-width: 768px) {
+      margin-top: 10px;
+    }
+    .Item {
+      position: relative;
+      width: 193px;
+      height: 176px;
+      display: inline-block;
+      margin: 32px 15px 0 15px;
+      border: 1px solid rgba(209, 209, 209, 0.5);
+      box-sizing: border-box;
+      border-radius: 3px;
+      cursor: pointer;
+      @media (max-width: 768px) {
+        margin: 10px 5px 0;
+        width: 140px;
+        height: 140px;
+      }
+      @media (max-width: 360px) {
+        width: 120px;
+        height: 130px;
+      }
+      .Image,
+      .Text {
+        max-width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        margin-top: 28px;
+        font-size: 70px;
+        text-align: center;
+        color: #000000;
+        font-family: Brandon Text Light;
+        mix-blend-mode: normal;
+        opacity: 0.75;
+        line-height: 80px;
+        @media (max-width: 768px) {
+          height: 50px;
+          width: 50px;
+          line-height: 50px;
+        }
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .ItemTitle {
+        display: inline-grid;
+        padding-top: 5px;
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
+      }
+      &.Checked {
+        border-color: #1AD279;
+        .Text {
+          font-weight: bold;
+        }
+      }
+      > img {
+        position: absolute;
+        right: 15px;
+        top: 18px;
+      }
+    }
+  }
+}
+
+.SlidderWrapper {
+  max-width: 478px;
+  margin: 0 auto;
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
+  .Description {
+    margin-top: 56px;
+    @media (max-width: 768px) {
+      margin-top: 15px;
+    }
+  }
+  .DescriptionImages {
+    .ImageWrapper {
+      max-width: 180px;
+      display: inline-block;
+      &:not(:last-child) {
+        padding: 12px;
+      }
+      .Image {
+        max-width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        img {
+          vertical-align: middle;
+          max-width: 100%;
+          height: 100%;
+        }
+
+        @media (max-width: 768px) {
+          max-width: 50px;
+          height: 50px;
+        }
+      }
+      > .Text {
+        font-size: 16px;
+        color: #000000;
+
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .SliderTable {
+    width: 100%;
+    margin-top: 36px;
+    @media (max-width: 768px) {
+      margin-top: 15px;
+    }
+    tr td {
+      max-width: 50%;
+      &.TextLeft .Value {
+        text-align: left;
+      }
+      &.TextRight .Value {
+        text-align: right;
+      }
+    }
+    .Value {
+      line-height: 70px;
+      font-size: 36px;
+      text-align: center;
+      letter-spacing: -0.0208333em;
+      color: #3BB4DC;
+      font-weight: bold;
+
+      @media (max-width: 768px) {
+        line-height: 38px;
+        font-size: 30px;
+      }
+    }
+  }
+  .SideTitle {
+    font-size: 12px;
+    letter-spacing: 0.166667em;
+    color: #8C8C8C;
+    padding: 32px 0 8px 0;
+    text-transform: uppercase;
+    text-align: left;
+    &.Right {
+      text-align: right;
+    }
+
+    @media (max-width: 768px) {
+      padding: 8px 0px;
+    }
+  }
+  &.Solid {
+    .rangeslider {
+      background: #EAEAEA;
+    }
+  }
+}
+
+.SelectWrapper,
+.MultipleSelectWrapper,
+.SlidderWrapper {
+  .DescriptionImages {
+    margin-top: 50px;
+    @media (max-width: 768px) {
+      margin-top: 15px;
+    }
+  }
+}
+
+.rangeslider {
+  &.rangeslider-horizontal {
+    border-radius: 4px;
+    margin: 10px 0;
+    * {
+      transition: all .2s;
+    }
+  }
+  box-shadow: none;
+  height: 8px;
+  background-color: #37ADD8;
+  .rangeslider__fill {
+    box-shadow: none;
+    height: 8px;
+    background-color: #37ADD8;
+  }
+  background: #69BE83;
+  .rangeslider__handle {
+    background: white;
+    outline: none;
+    max-width: 26px;
+    height: 26px;
+    margin: 0;
+    border-radius: 50%;
+    box-shadow: 0 2px 14px #1F668F;
+    border: none;
+    &::after {
+      display: none;
+    }
+  }
+}

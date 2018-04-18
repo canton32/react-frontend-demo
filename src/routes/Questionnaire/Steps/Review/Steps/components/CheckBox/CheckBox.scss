@@ -1,0 +1,66 @@
+.checkbox_wrapper {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: auto 0px auto auto;
+  width: 28px;
+  height: 28px;
+
+  /* Hide the browser's default checkbox */
+  input {
+    position: absolute;
+    display: none;
+    cursor: pointer;  
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 28px;
+    width: 28px;
+    border-radius: 4px;
+    border: 1px solid #EAEAEA;
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    &:after {
+      content: "";
+      position: absolute;
+    }
+
+    /* Style the checkmark/indicator */
+    &:after {
+      left: 10px;
+      top: 3px;
+      width: 8px;
+      height: 15px;
+      border: solid #D8D8D8;
+      opacity: 0.6;
+      border-width: 0 2px 2px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+
+  /* On mouse-over, change checkmark color */
+  &:hover input ~ .checkmark {
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  /* When the checkbox is checked, change checkmark color */
+  input:checked ~ .checkmark {
+    /* Show the checkmark when checked */
+    &:after {
+      border-color: #1AD279;
+      opacity: 1;
+    }
+  }
+}

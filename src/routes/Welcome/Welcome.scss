@@ -1,0 +1,140 @@
+.Welcome {
+  .WelcomeWrapper {
+    background-image: url(../../images/background.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+    margin-left: 90px;
+    padding-top: 112px;
+    @media (min-width: 1024px) {
+      height: 584px;
+    }
+    @media (max-width: 768px) {
+      margin-left: 0;
+      background-image: none;
+      padding-top: 21px;
+    }
+    @media (max-width: 360px) {
+      padding-top: 5px;
+    }
+    .Form {
+      max-width: 551px;
+      @media (max-width: 768px) {
+        margin: auto;
+        > div:not(:first-child) {
+          max-width: 401px;
+          margin: auto;
+        }
+      }
+      .Title {
+        font-size: 32px;
+        letter-spacing: -0.0277778em;
+        color: #2E3138;
+        max-width: 551px;
+        padding: 0;
+        @media (max-width: 768px) {
+          font-size: 29px;
+        }
+        @media (max-width: 360px) {
+          font-size: 25px;
+        }
+      }
+      .SubTitle {
+        font-size: 16px;
+        max-width: 398px;
+        margin: 0 auto;
+        color: #AFAFAF;
+        padding-top: 46px;
+        @media (max-width: 768px) {
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-top: 20px;
+          font-size: 13px;
+        }
+        &.Verified {
+          max-width: 446px;
+        }
+        &.NotVerified {
+          max-width: 489px;
+
+          @media (min-width: 769px) {
+            padding-top: 162px;
+          }
+        }
+        .Email {
+          color: #000000;
+        }
+        .TryAgain {
+          color: #3BB4DC;
+        }
+        &.CustomTitle {
+          max-width: 523px;
+          padding-bottom: 16px;
+        }
+      }
+      .Button {
+        max-width: 346px;
+        margin: 10px auto;
+        padding: 13px;
+        background: #3BB4DC;
+        border-radius: 4px;
+        color: white;
+        font-size: 12px;
+        cursor: pointer;
+        letter-spacing: 0.166667em;
+        @media (max-width: 768px) {
+          width: 80%;
+          font-size: 10px;
+        }
+        @media (max-width: 360px) {
+          width: 80%;
+          font-size: 8px;
+        }
+        &.White {
+          border: 1px solid #3BB4DC;
+          box-sizing: border-box;
+          background: transparent;
+          color: #3BB4DC;
+        }
+      }
+    }
+  }
+  .Footer {
+    height: 99px;
+    padding-right: 43px;
+    position: relative;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+      height: 50px;
+    }
+
+    .Button {
+      position: absolute;
+      background: #3bb4dc;
+      border-radius: 4px;
+      width: 185px;
+      line-height: 48px;
+      bottom: 20px;
+      right: 43px;
+      background: #3BB4DC;
+      border-radius: 4px;
+      font-size: 12px;
+      letter-spacing: 0.166667em;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      &:hover {
+        color: #FFFFFF;
+        box-shadow: 1px 1px 3px #3BB4DC;
+      }
+    }
+    &.Disabled {
+      .Button {
+        background-color: #D8D8D8;
+        &:hover {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.Questionnaire {
+  .QuestionnaireWrapper {
+    min-height: 705px;
+    padding-bottom: 125px;
+
+    @media (max-width: 768px) {
+      min-height: unset;
+      padding-bottom: 85px;
+    }
+
+    .MobileTitle {
+      padding: 10px;
+      display: none;
+      @media (max-width: 768px) {
+        display: block;
+      }
+    }
+  }
+}

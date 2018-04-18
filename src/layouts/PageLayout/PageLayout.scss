@@ -1,0 +1,29 @@
+.page-layout__viewport {
+  background: linear-gradient(to right, #217FBC, #44C8E8);
+  padding: 45px 10px;
+  @media (max-width: 768px) {
+    padding: 15px 10px;
+  }
+
+  div.row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  > div {
+    max-width: 1090px;
+    min-height: 745px;
+
+    padding: 40px 0px 0px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 28px rgba(11,103,157,.7);
+
+    @media (max-width: 768px) {
+      min-height: unset;
+      padding: 20px 0px 0px;
+    }
+  }
+}

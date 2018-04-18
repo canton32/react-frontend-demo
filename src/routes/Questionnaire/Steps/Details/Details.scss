@@ -1,0 +1,303 @@
+.YourDetails, .Review {
+  margin-top: 45px;
+  @media (max-width: 768px) {
+    margin-top: 0;
+  }
+
+  .FewThings {
+    .Description {
+      max-width: 465px;
+    }
+  }
+
+  .Title {
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: -0.0277778em;
+    color: #2E3138;
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 0 15px;
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+    @media (max-width: 360px) {
+      font-size: 19px;
+    }
+  }
+
+  .Description {
+    font-size: 16px;
+    color: #AFAFAF;
+    max-width: 725px;
+    margin: 30px auto 0;
+    padding: 0 15px;
+    @media (max-width: 768px) {
+      font-size: 13px;
+      margin: 5px auto 0;
+    }
+  }
+
+  .SubDescription {
+    font-size: 16px;
+    color: #AFAFAF;
+    max-width: 725px;
+    margin: 10px auto 0;
+    padding: 0 15px;
+    @media (max-width: 768px) {
+      font-size: 13px;
+    }
+  }
+
+  .SubTitle {
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: -0.888889px;
+    color: #2E3138;
+    margin-top: 25px;
+    position: relative;
+    padding: 0 15px;
+
+    @media (max-width: 768px) {
+      font-size: 19px;
+      margin-top: 10px;
+    }
+
+    img {
+      position: absolute;
+      height: 100%;
+      width: 16px;
+      margin-left: 15px;
+    }
+  }
+
+  .Form {
+    max-width: 600px;
+    width: 100%;
+    display: inline-block;
+    margin: 10px auto;
+
+    @media (max-width: 768px) {
+      margin: 0px auto;
+    }
+
+    .Field {
+      @media (max-width: 768px) {
+        min-width: 100%!important;
+      }
+    }
+
+    &.CreatePassword {
+      max-width: 725px;
+    }
+
+    &.PersonalInformation {
+      max-width: 671px;
+
+      .Field {
+        &:nth-child(1) {
+          width: 20%;
+        }
+
+        &:nth-child(2) {
+          width: 40%;
+        }
+
+        &:nth-child(3) {
+          width: 40%;
+        }
+
+        &:nth-child(4) {
+          width: 30%;
+        }
+
+        &:nth-child(5) {
+          width: 40%;
+        }
+
+        &:nth-child(6) {
+          width: 30%;
+        }
+      }
+    }
+
+    &.ContactDetails {
+      max-width: 700px;
+      text-align: left;
+      display: flex;
+      flex-wrap: wrap;
+
+      .Field {
+        &.Postcode {
+          min-width: 33%;
+          flex: 1;
+        }
+
+        &.HouseNumber {
+          min-width: 66%;
+          flex: 1;
+
+          input {
+            position:relative;
+            padding-right: 35px;
+
+            &::-webkit-calendar-picker-indicator {
+              color: transparent;
+              opacity: 1;
+
+              position:absolute;
+              top:0px;
+              bottom: 0px;
+              right: 0px;
+              background: url(./Images/magnifier.svg) no-repeat;
+              background-position:center;
+              background-size: 16px;
+              width: 26px;
+              height: auto;
+              cursor: pointer;
+            }
+          }
+        }
+
+        &.LandlinePhone {
+          min-width: 50%;
+        }
+      }
+    }
+
+    &.ExistingBank {
+      display: flex;
+      flex-wrap: wrap;
+
+      .Field {
+        min-width: 50%;
+      }
+    }
+
+    &.TaxInformation {
+      text-align: left;
+
+      .Field {
+        width: 50%;
+      }
+    }
+
+    .FooterText {
+      min-width: 100%;
+      font-size: 16px;
+      text-align: center;
+      color: #AFAFAF;
+      margin-top: 18px;
+
+      @media (max-width: 768px) {
+        font-size: 12px;
+        margin-top: 10px;
+      }
+
+      a {
+        color: #3BB4DC;
+        border-bottom: 1px solid;
+        cursor: pointer;
+      }
+    }
+
+    .Field {
+      display: inline-block;
+      padding: 15px 12px 0px;
+      position: relative;
+
+      @media (max-width: 768px) {
+        padding: 8px 12px 0px;
+      }
+
+      img {
+        position: absolute;
+        bottom: 18px;
+        left: 20px;
+      }
+
+      &.Check {
+        min-width: 50%;
+        padding: 25px 12px 0px 50px;
+      }
+
+      &.Full {
+        width: calc(100% - 15px);
+      }
+
+      .Label {
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 2px;
+        color: #8C8C8C;
+        line-height: 40px;
+        text-align: left;
+        white-space: nowrap;
+
+        @media (max-width: 768px) {
+          line-height: 26px;
+          font-size: 11px;
+          letter-spacing: 0.5px;
+        }
+      }
+
+      select.Select {
+        background: url(../../../../images/down_arrow.png) no-repeat;
+        background-position: calc(100% - 15px) center;
+        background-size: 10px 5px;
+        padding-right: 28px;
+        cursor: pointer;
+      }
+
+      .Input,
+      .Select {
+        letter-spacing: -0.5px;
+        padding-left: 16px;
+        width: 100%;
+        background: white;
+        border: 1px solid #EAEAEA;
+        box-sizing: border-box;
+        border-radius: 4px;
+        color: #2E3138;
+        font-family: 'Brandon Text Medium';
+        -webkit-appearance: none;
+
+        &::placeholder {
+          color: #B9B9B9;
+        }
+      }
+
+      input[type="date"].Input {
+        padding-right: 39px;
+
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          display: none;
+        }
+        &::-webkit-clear-button {
+          -webkit-appearance: none;
+          display: none;
+        }
+        &::-ms-clear {
+          display: none;
+        }
+        &::-webkit-calendar-picker-indicator {
+          color: transparent;
+          opacity: 1;
+
+          display: block;
+          background: url(../../../../images/calendar.png) no-repeat;
+          background-position:center;
+          background-size: 21px 18px;
+          position: absolute;
+          right:20px;
+          cursor: pointer;
+
+          @media (max-width: 768px) {
+            background-size: 18px 15px;
+          }
+        }
+      }
+    }
+  }
+}

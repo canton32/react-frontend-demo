@@ -1,0 +1,134 @@
+.AuthView {
+  min-height: 705px;
+
+  @media (max-width: 768px) {
+    min-height: unset;
+  }
+
+  .FormWrapper {
+    background-image: url(../../images/background.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+    margin-left: 90px;
+    padding-top: 112px;
+    @media (max-width: 768px) {
+      margin-left: 0;
+      background-image: none;
+      padding-top: 21px;
+    }
+
+    @media (max-width: 360px) {
+      padding-top: 5px;
+    }
+    > .Form {
+      max-width: 551px;
+      @media (max-width: 768px) {
+        > div:not(:first-child) {
+          max-width: 451px;
+        }
+      }
+      .Title {
+        font-size: 32px;
+        letter-spacing: -0.0277778em;
+        color: #2E3138;
+        max-width: 551px;
+        padding: 0;
+        @media (max-width: 768px) {
+          font-size: 29px;
+        }
+        @media (max-width: 360px) {
+          font-size: 25px;
+        }
+      }
+      .SubTitle {
+        font-size: 16px;
+        max-width: 398px;
+        margin: 0 auto;
+        color: #AFAFAF;
+        padding-top: 46px;
+        @media (max-width: 768px) {
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-top: 25px;
+          font-size: 13px;
+        }
+      }
+      .FormGroup {
+        padding-top: 13px;
+        max-width: 346px;
+        margin: 0 auto;
+        font-size: 12px;
+        text-align: left;
+        @media (max-width: 768px) {
+          padding: 15px;
+          padding-bottom: 0;
+        }
+        > div {
+          line-height: 55px;
+          letter-spacing: 0.166667em;
+          color: #8C8C8C;
+          text-transform: uppercase;
+          position: relative;
+          @media (max-width: 768px) {
+            margin-left: 25px;
+            line-height: 40px;
+          }
+          > input {
+            color: #2E3138;
+            border: 1px solid #AFAFAF;
+            box-sizing: border-box;
+            border-radius: 4px;
+            font-family: Brandon Text Medium;
+            width: 100%;
+          }
+          > img {
+            position: absolute;
+            left: -30px;
+            top: 20px;
+
+            @media (max-width: 768px) {
+              top: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .Footer {
+    height: 99px;
+    padding-right: 43px;
+    position: relative;
+
+    .Button {
+      position: absolute;
+      background: #3bb4dc;
+      border-radius: 4px;
+      width: 185px;
+      line-height: 48px;
+      bottom: 20px;
+      right: 43px;
+      background: #3BB4DC;
+      border-radius: 4px;
+      font-size: 12px;
+      letter-spacing: 0.166667em;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      @media (max-width: 768px) {
+        left: calc(50% - 92.5px);
+      }
+      &:hover {
+        color: #FFFFFF;
+        box-shadow: 1px 1px 3px #3BB4DC;
+      }
+    }
+    &.Disabled {
+      .Button {
+        background-color: #D8D8D8;
+        &:hover {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}

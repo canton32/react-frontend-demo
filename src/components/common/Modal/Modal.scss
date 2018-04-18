@@ -1,0 +1,60 @@
+
+.numeos-modal-overlay {
+  background: rgba(19,19,22,0.40)!important;
+  padding: 10px!important;
+
+  .numeos-modal-closeIcon {
+    top: 28px;
+    right: 12px;
+
+    path {
+      fill: #333;
+    }
+
+    @media (max-width: 768px) {
+      top: 7px;
+      right: -5px;
+    }
+  }
+
+  .numeos-modal-content {
+    margin: auto;
+    background: white;
+    box-shadow: 0 10px 28px 0 rgba(16,50,123,0.70)!important;
+    border-radius: 10px;
+    padding: 30px 0px 25px;
+    max-width: 1005px;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+      padding: 13px 0px;
+    }
+
+    .numeos-modal-title {
+      font-size: 28px;
+      color: #2E3138;
+      letter-spacing: -0.78px;
+      text-align: center;
+      margin: 0;
+      padding: 0px 35px;
+
+      @media (max-width: 768px) {
+        font-size: 22px;
+        letter-spacing: -0.61px;
+      }
+
+      @media (max-width: 360px) {
+        padding: 0px 20px;
+      }
+    }
+  }
+}
+
+//Blur Filter When Modal is displayed
+#root.filter-blur {
+  -webkit-filter: blur(20px);
+  -moz-filter: blur(20px);
+  -o-filter: blur(20px);
+  -ms-filter: blur(20px);
+  filter: blur(20px);
+}

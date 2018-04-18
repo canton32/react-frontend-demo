@@ -1,0 +1,238 @@
+.Review {
+  .content {
+    padding: 10px 28px 20px;
+
+    @media (max-width: 768px) {
+      padding: 0px 0px 10px;
+    }
+  }
+
+  //Partner Bank Accounts Page
+  .PartnerBankAccounts {
+    .PartnerBankAccountsWrapper {
+      display: flex;
+      padding: 0 25px;
+      flex-wrap: wrap;
+
+      @media (max-width: 768px) {
+        padding: 0 10px;
+      }
+    }
+
+    .ProductPreviewWrapper {
+      width: 396px;
+      padding: 0 21px;
+
+      .ProductPreview {
+        margin-top: 17px;
+        @media (max-width: 768px) {
+          margin-top: 10px;
+        }
+      }
+
+      @media (max-width: 1000px) {
+        padding: 0 10px;
+        width: 100%;
+      }
+
+      @media (max-width: 768px) {
+        padding: 0px;
+      }
+    }
+
+    .PartnerBankTableWrapper {
+      padding: 0 21px;
+      flex: 1;
+
+      @media (max-width: 1000px) {
+        padding: 0 10px;
+        width: 100%;
+      }
+
+      @media (max-width: 768px) {
+        padding: 0px;
+      }
+
+      .OptionalDirectDebitWrapper {
+        .OptionalDirectDebit {
+          font-size: 12px;
+          color: #8C8C8C;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          margin-top: 10px;
+          text-align: left;
+        }
+
+        .OptionalDirectDebitCheckItem {
+          display: flex;
+          margin-top: 6px;
+
+          div {
+            flex: 1;
+            text-align: left;
+            margin-right: 20px;
+            font-size: 16px;
+            color: #2E3138;
+            letter-spacing: -0.44px;
+
+            @media (max-width: 768px) {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //Terms and Conditions
+  .TermsConditions {
+    .Header_Agree {
+      text-align: right;
+      font-size: 12px;
+      color: #8C8C8C;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 21px;
+      padding: 0 25px;
+
+      @media (max-width: 768px) {
+        margin-top: 15px;
+        padding: 0 5px;
+      }
+    }
+
+    .TermsConditionsCheckItem {
+      display: flex;
+      padding: 0 25px;
+
+      @media (max-width: 768px) {
+        padding: 0 5px;
+      }
+
+      .checkbox_wrapper {
+        margin: 3px 0px auto auto;
+      }
+
+      &:first-child {
+        margin-top: 26px;
+
+        @media (max-width: 768px) {
+          margin-top: 10px;
+        }
+      }
+      &:last-child {
+        margin-top: 57px;
+
+        @media (max-width: 768px) {
+          margin-top: 15px;
+        }
+      }
+
+      div {
+        flex: 1;
+        text-align: left;
+        margin-right: 20px;
+        font-size: 16px;
+        line-height: 25px;
+        color: #AFAFAF;
+
+        @media (max-width: 768px) {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
+
+// Hyperlink
+a.hyperlink, span.hyperlink {
+  color: #3BB4DC!important;
+  position: relative;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    width: 100%;
+    border-top: 1px solid;
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+  }
+}
+
+//ViewAccountDetails Modal
+.overlay-view-account-details {
+  background: rgba(19,19,22,0.40)!important;
+
+  .closeIcon-view-account-details {
+    top: 30px;
+    right: 30px;
+
+    path {
+      fill: #333;
+    }
+  }
+
+  .modal-view-account-details {
+    margin: auto;
+    max-width: 1090px;
+    background: #FFFFFF;
+    box-shadow: 0 10px 28px 0 rgba(16,50,123,0.70)!important;
+    border-radius: 10px;
+    padding: 30px 40px 40px;
+
+    h2 {
+      font-size: 28px;
+      color: #2E3138;
+      letter-spacing: -0.78px;
+      line-height: 68px;
+    }
+
+    .AccountDetailsContainer {
+      min-width: 320px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -25px;
+      margin-right: -25px;
+
+      .AccountDetailsItem {
+        min-width: 320px;
+        width: 50%;
+        flex-grow: 1;
+        padding-left: 25px;
+        padding-right: 25px;
+
+        .field {
+          display:inline-block;
+          width: 280px;
+          line-height: 56px;
+          font-size: 12px;
+          color: #8C8C8C;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+        }
+
+        .value {
+          display: inline-block;
+          line-height: 56px;
+          font-size: 18px;
+          color: #2E3138;
+          letter-spacing: -0.5px;
+        }
+
+        .line-bottom {
+          background: #F1F1F1;
+          height: 1px;
+        }
+      }
+    }
+
+    .AccountDetailsDescription {
+      margin-top: 38px;
+      font-size: 16px;
+      color: #8C8C8C;
+      line-height: 24px;
+    }
+  }
+}

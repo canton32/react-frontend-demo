@@ -1,0 +1,69 @@
+.narcissus_17w311v {
+  width: 571px !important;
+  // height: 536px;
+
+  background: #FFFFFF;
+  box-shadow: 0 10px 28px rgba(16, 50, 123, 0.700436);
+  border-radius: 10px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+
+  .Title {
+    line-height: 34px;
+    font-size: 28px;
+    text-align: center;
+    letter-spacing: -0.777778px;
+    color: #2E3138;
+    margin-top: 35px;
+  }
+
+  .Close {
+    position: absolute;
+    width: 21.69px;
+    height: 21.69px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid #FFFFFF;
+    right: 27px;
+    top: 28px;
+    border-radius: 50%;
+
+    svg {
+      position: absolute;
+      left: 3px;
+      top: 1px;
+    }
+  }
+
+  .Products {
+    margin: 16px auto;
+
+    .Product {
+      .Title {
+        margin-top: 0;
+        font-size: 12px;
+        letter-spacing: 2px;
+        color: #8C8C8C;
+        text-align: left;
+        margin-left: 25px;
+        line-height: 48px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .narcissus_x3xwbs {
+    svg {
+      display: none;
+    }
+  }
+
+  .footer-buttons {
+    position: relative;
+    padding: 0;
+  }
+}
+
+.Button.Next {
+  cursor: pointer;
+}

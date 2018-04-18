@@ -1,0 +1,49 @@
+@import 'base';
+@import '~bootstrap/scss/bootstrap.scss';
+@import 'font.scss';
+
+// Some best-practice CSS that's useful for most apps
+// Just remove them if they're not what you want
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-family: 'Brandon Text Medium';
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+}
+
+img {
+  vertical-align: initial;
+}
+
+input, select {
+  height: 48px;
+  font-size: 16px;
+  padding: 12px;
+
+  @media (max-width: 768px) {
+    height: 38px;
+    font-size: 15px;
+    padding: 0px 8px;
+  }
+
+  &::-webkit-contacts-auto-fill-button {
+    visibility: hidden;
+    display: none !important;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+  }
+}

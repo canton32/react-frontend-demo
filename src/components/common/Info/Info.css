@@ -1,0 +1,7 @@
+svg {
+  transform: translateY(2px);
+}
+
+.__react_component_tooltip.type-dark.place-left:after {
+  border-left-color: white !important;
+}

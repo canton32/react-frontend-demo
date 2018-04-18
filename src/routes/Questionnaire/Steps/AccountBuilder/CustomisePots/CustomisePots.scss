@@ -1,0 +1,61 @@
+.CustomisePotsModal {
+  max-width: 571px;
+  text-align: center;
+  padding: 0 15px;
+
+  .ModalDialog {
+    padding: 0 30px;
+
+    @media (max-width: 768px) {
+      padding: 0 15px;
+    }
+
+    .Title {
+      font-size: 28px;
+      text-align: center;
+      letter-spacing: -0.777778px;
+      color: #2E3138;
+
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
+    }
+
+    .Products {
+      margin: 16px auto;
+
+      @media (max-width: 768px) {
+        margin: 5px auto;
+      }
+
+      .Product {
+        padding: 15px 0px;
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 768px) {
+          padding: 10px 0px;
+        }
+
+        .ProductTitle {
+          margin-top: 0;
+          font-size: 12px;
+          letter-spacing: 2px;
+          color: #8C8C8C;
+          text-align: left;
+          margin-left: 25px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  .footer-buttons {
+    position: relative;
+    padding: 0;
+  }
+
+  .Button.Next {
+    cursor: pointer;
+  }
+}

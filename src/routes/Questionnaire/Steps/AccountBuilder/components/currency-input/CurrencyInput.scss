@@ -1,0 +1,34 @@
+.Currency {
+  input {
+    padding: 0px;
+    &:disabled {
+      opacity: 1;
+    }
+  }
+
+  .triangles-wrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    bottom: 0;
+    right: -14px;
+    justify-content: center;
+  }
+
+  #total-up-touch-area,
+  #total-down-touch-area {
+    display: block;
+    position: absolute;
+    right: -14px;
+    width: 30px;
+    height: 30px;
+  }
+
+  #total-up-touch-area {
+    top: -8px;
+  }
+  #total-down-touch-area {
+    bottom: -12px;
+  }
+}

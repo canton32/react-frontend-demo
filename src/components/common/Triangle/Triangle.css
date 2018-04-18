@@ -1,0 +1,8 @@
+svg.Triangle {
+  opacity: 0.45533288;
+  margin: 2px 0px;
+}
+
+svg.Triangle:hover {
+  opacity: 1;
+}

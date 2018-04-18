@@ -1,0 +1,421 @@
+.AccountBuilderWrapper {
+  .AccountBuilder {
+    text-align: center;
+    max-width: 768px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 0 0;
+    @media (max-width: 768px) {
+      padding: 0px;
+    }
+
+    * {
+      font-family: "Brandon Text Medium";
+      font-weight: 500;
+    }
+
+    .Header {
+      display: flex;
+      @media (max-width: 768px) {
+        display: block;
+      }
+
+      .GreyBlock {
+        max-width: 368px;
+        width: calc(50% - 16px);
+        margin: 0 8px;
+        padding: 15px;
+
+        @media (max-width: 768px) {
+          width: calc(100% - 16px);
+          max-width: unset;
+          margin: 0px 8px 8px;
+        }
+
+        .Title {
+          font-size: 28px;
+          line-height: 32px;
+          letter-spacing: -0.777778px;
+          color: #2E3138;
+          padding-bottom: 5px;
+        }
+
+        .SubTitle {
+          font-size: 12px;
+          color: #8C8C8C;
+        }
+
+        .Content {
+          .Currency {
+            width: 50%;
+            min-width: 200px;
+            margin: 0 auto;
+            position: relative;
+
+            input {
+              background: transparent;
+              outline: none;
+              border: none;
+              line-height: 68px;
+              font-size: 36px;
+              text-align: center;
+              letter-spacing: -0.75px;
+              width: 100%;
+              font-weight: bold;
+
+              @media (max-width: 768px) {
+                font-size: 30px;
+                line-height: 38px;
+              }
+            }
+          }
+
+          .Products {
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+
+            .Product {
+              width: 30%;
+              max-width: 80px;
+
+              .Image {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                  width: 38px;
+                  height: 40px;
+                  background-size: contain;
+                }
+
+                &.Text {
+                  line-height: 38px;
+                  font-size: 30px;
+                }
+              }
+
+              .Text {
+                font-size: 11px;
+                color: #000000;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                margin: 0 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .PotToggleWrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 35px 0px;
+      color: #8C8C8C;
+      max-width: 680px;
+      margin: 0 auto;
+
+      @media (max-width: 768px) {
+        padding: 5px 0px;
+      }
+
+      .ToggleWrapper {
+        flex: 1;
+        text-align: right;
+        padding: 0 25px;
+        display: flex;
+        flex-direction: column;
+
+        .ToggleBody {
+          display: flex;
+          justify-content: flex-end;
+          margin-bottom: 8px;
+
+          @media (max-width: 768px) {
+            margin-bottom: 0px;
+          }
+
+          &.Right {
+            justify-content: flex-start;
+          }
+
+          .react-toggle {
+            -ms-flex-order: 0;
+            order: 0;
+          }
+
+          .ToggleSubTitle {
+            -ms-flex-order: 1;
+            order: 1;
+          }
+        }
+
+        .ToggleTitle {
+          font-size: 12px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          flex: 1;
+          margin-bottom: 8px;
+        }
+
+        .ToggleSubTitle {
+          font-size: 12px;
+          padding-left: 15px;
+          max-width: 135px;
+          text-align: left;
+
+          &.Right {
+            padding-left: 0;
+            padding-right: 15px;
+          }
+        }
+
+        .Currency {
+          input {
+            background: transparent;
+            outline: none;
+            border: none;
+            line-height: 68px;
+            font-size: 36px;
+            text-align: right;
+            letter-spacing: -0.75px;
+            width: 100%;
+            font-weight: bold;
+
+            @media (max-width: 768px) {
+              line-height: 38px;
+              font-size: 30px;
+            }
+          }
+        }
+
+        &.Right {
+          text-align: left;
+          padding: 0 25px;
+
+          .ToggleBody {
+            .react-toggle {
+              -ms-flex-order: 1;
+              order: 1;
+            }
+
+            .ToggleSubTitle {
+              -ms-flex-order: 0;
+              order: 0;
+            }
+          }
+
+          .Currency {
+            input {
+              text-align: left;
+            }
+          }
+        }
+      }
+
+      .CircularSliderWrapper {
+        padding: 0px;
+
+        .CircularSlider {
+          width: 130px;
+        }
+      }
+    }
+
+    .Footer {
+      .GreyBlock {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 745px;
+        padding: 24px;
+        margin: 0px auto;
+        align-items: center;
+
+        @media (max-width: 768px) {
+          width: calc(100% - 16px);
+          padding: 0px 12px 12px;
+        }
+
+        .InterestBlock {
+          flex: 1;
+
+          .SubTitle {
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #8C8C8C;
+
+            @media (max-width: 360px) {
+              font-size: 10px;
+            }
+          }
+
+          .Amount {
+            font-size: 64px;
+            text-align: center;
+            letter-spacing: -1.33333px;
+            color: #2E3138;
+            font-weight: bold;
+          }
+        }
+
+        .InterestRateOffer {
+          width: 170px;
+          line-height: 36px;
+          font-size: 28px;
+          text-align: center;
+          letter-spacing: -0.777778px;
+          color: #2E3138;
+
+          .SubDescription {
+            font-size: 12px;
+            font-weight: normal;
+            line-height: 18px;
+            color: #8C8C8C;
+            letter-spacing: 0px;
+          }
+        }
+      }
+    }
+
+    .GreyBlock {
+      background: #FBF7F4;
+      border-radius: 8px;
+    }
+  }
+
+  .footer-buttons {
+    flex-wrap: wrap;
+
+    > button {
+      order: 1;
+    }
+
+    @media (max-width: 768px) {
+      padding: 12px;
+    }
+
+    .Prev {
+      @media (min-width: 768px) {
+        width: 230px;
+      }
+    }
+
+    .CustomisePots {
+      position: relative;
+      width: 230px;
+      margin: 10px 0;
+      order: 1;
+
+      @media (max-width: 810px) {
+        width: 200px;
+      }
+
+      @media (max-width: 768px) {
+        order: 0;
+        width: 100%;
+        margin: 0;
+      }
+
+      > .InfoText {
+        font-size: 16px;
+        letter-spacing: -.0277778em;
+        color: #afafaf;
+        position: absolute;
+        width: 100%;
+        top: -30px;
+      }
+
+      > .Button {
+        margin: 0;
+        min-width: 100%;
+        height: 100%;
+        background: #69D5F8;
+        border: 1px solid #69D5F8;
+      }
+    }
+  }
+}
+
+
+.AccountBuilderWrapper {
+  @media (max-width: 768px) {
+    padding-bottom: 57px;
+  }
+
+  @media (max-width: 360px) {
+    padding-bottom: 50px;
+  }
+
+  .AccountBuilder {
+    @media (max-width: 768px) {
+      .PotToggleWrapper {
+        flex-grow: 1;
+
+        .ToggleWrapper {
+          padding: 0 8px 0 10px;
+          min-width: 50%;
+          order: 1;
+          text-align: center!important;
+
+          &.Right {
+            padding: 0 10px 0 8px;
+          }
+
+          .ToggleTitle {
+            font-size: 11px;
+            letter-spacing: 1px;
+          }
+
+          .ToggleBody {
+            justify-content: center!important;
+
+            .ToggleSubTitle {
+              font-size: 10px;
+            }
+          }
+
+          .Currency input {
+            text-align: center!important;
+          }
+        }
+
+        .CircularSliderWrapper {
+          padding: 0 15px 10px;
+          min-width: 100%;
+          order: 0;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      .Footer {
+        .GreyBlock {
+          .InterestBlock {
+            order: 1;
+
+            .SubTitle {
+              letter-spacing: 0.5px;
+            }
+
+            .Amount {
+              font-size: 32px;
+              line-height: 36px;
+            }
+          }
+
+          .InterestRateOffer {
+            order: 0;
+            min-width: 100%;
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.PartnerBankAccounts {
+  .ProductPreview {
+    background: #FBF7F4;
+    border-radius: 8px;
+    padding: 40px 0px;
+    @media (max-width: 768px) {
+      padding: 15px 0px;
+    }
+
+    .Title {
+      font-size: 12px;
+      line-height: 17px;
+      color: #8C8C8C;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .Content {
+      font-family: "Brandon Text Bold";
+      font-size: 32px;
+      letter-spacing: -0.67px;
+      line-height: 44px;
+      color: #2E3138;
+    }
+
+    .LumpSum {
+      text-align: center;
+    }
+
+    .AccessLevel {
+      margin-top: 29px;
+      text-align: center;
+
+      .CircularSlider {
+        margin-top: 20px;
+
+        @media (max-width: 768px) {
+          margin-top: 10px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        margin-top: 10px;
+      }
+    }
+
+    .PotWrapper {
+      margin-top: 25px;
+
+      @media (max-width: 768px) {
+        margin-top: 10px;
+      }
+
+      .Pot {
+        display: inline-block;
+        width: 50%;
+        padding: 0 9px;
+
+        .Title {
+          @media (max-width: 768px) {
+            letter-spacing: 1.2px;
+          }
+
+          @media (max-width: 360px) {
+            font-size: 10px;
+            letter-spacing: 0.5px;
+          }
+        }
+
+        svg {
+          @media (max-width: 360px) {
+            width: 11px;
+            height: 11px;
+          }
+        }
+
+        &.Left {
+          text-align: right;
+          .Content {
+            color: #3BB4DC;
+          }
+        }
+
+        &.Right {
+          text-align: left;
+          .Content {
+            color: #6ABF82;
+          }
+        }
+      }
+    }
+
+    .InterestRate {
+      margin-top: 30px;
+      @media (max-width: 768px) {
+        margin-top: 10px;
+      }
+    }
+  }
+}

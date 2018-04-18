@@ -1,0 +1,53 @@
+
+.TermsConditions {
+  .PersonalInformation {
+    background: #FBF7F4;
+    border-radius: 8px;
+    margin-top: 17px;
+    padding: 20px 43px 45px 43px;
+
+    @media (max-width: 768px) {
+      margin-top: 10px;
+      padding: 15px;
+    }
+
+    >div {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .PersonalInformationItem {
+      padding: 25px 2px 0px;
+      min-width: 33.3%;
+      max-width: 50%;
+      flex-grow: 1;
+      text-align: left;
+
+      @media (max-width: 768px) {
+        padding: 10px 2px 0px;
+      }
+
+      &:last-child {
+        max-width: 100%;
+      }
+
+      div:first-child {
+        font-size: 12px;
+        color: #8C8C8C;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      div:last-child {
+        font-size: 18px;
+        color: #2E3138;
+        letter-spacing: -0.5px;
+        margin-top: 4px;
+
+        @media (max-width: 768px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

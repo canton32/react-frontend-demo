@@ -1,0 +1,29 @@
+.customeTheme {
+  color: #8C8C8C !important;
+  background-color: rgb(255, 255, 255) !important;
+  text-align: left !important;
+  font-size: 12px !important;
+  text-transform: none !important;
+  padding: 20px 21px !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.19);
+  border-radius: 4px !important;
+  letter-spacing: 0px;
+  b {
+    color: #2E3138 !important;
+    font-family: 'Brandon Text Bold';
+  }
+  &.place-top:after {
+    border-top-color: rgb(255, 255, 255) !important;
+    border-top-style: solid !important;
+    border-top-width: 6px !important;
+  }
+
+  &.__react_component_tooltip {
+    margin: 0;
+    width: 219px;
+    line-height: 130%;
+    &.place-top {
+      // margin-top: 20px;
+    }
+  }
+}
