@@ -16,10 +16,7 @@ const { HOME_URL } = Config
 
 class Questionnaire extends Component {
   onBackToWelcome = () => {
-    const props = this.props
-    const { welcomeKey } = props
-
-    props.router.push(`/welcome/${welcomeKey}`)
+    this.props.router.push(`/`)
   }
 
   onOpenAccount = () => {
@@ -60,7 +57,6 @@ Questionnaire.propTypes = {
 
 const mapStateToProps = (state) => ({
   questions: state.scoring.questions,
-  welcomeKey: state.user.welcomeKey,
   token: state.user.token
 })
 
