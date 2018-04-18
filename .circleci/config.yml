@@ -1,1 +1,83 @@
-
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  build:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:9.5.0-browsers
+    steps:
+      # Checkout the code from the branch into the working_directory
+      - checkout
+      - run:
+          name: Show current branch
+          command: echo ${CIRCLE_BRANCH}
+      # Restore local dependencies from cache
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+      - run:
+          name: Install Project Dependencies
+          command: yarn install
+      # Cache local dependencies if they don't exist
+      - save_cache:
+          key: v1-dependencies-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run:
+          name: Lint the source code
+          command: yarn run lint
+      - run:
+          name: Rebuild sass
+          command: npm rebuild node-sass --force
+      - run:
+          name: Build project
+          command: yarn run build
+      # Cache the build folder for the deploy job
+      - save_cache:
+          key: app-build-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
+          paths:
+            - dist
+  deploy:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:9.5.0-browsers
+    steps:
+      - run:
+          name: Show current branch
+          command: echo ${CIRCLE_BRANCH}
+      # Restore cache from the build job which contains the
+      # build folder that needs to be deployed
+      - restore_cache:
+          key: app-build-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
+      # Install AWS command line tools
+      - run: sudo apt-get update && sudo apt-get install -y python-dev python-pip
+      - run: sudo pip install awscli --upgrade
+      - run:
+          name: Check AWS version
+          command: aws --version
+      - run:
+          name: List s3 buckets
+          command: aws s3 ls
+      - run:
+          name: Deploy to S3
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+                aws --region eu-west-2 s3 sync dist s3://demo.numeos.com/ --delete
+            fi
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                  - master
