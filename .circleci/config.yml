@@ -14,9 +14,6 @@ jobs:
       - run:
           name: Show current branch
           command: echo ${CIRCLE_BRANCH}
-      - run:
-          name: Clear Node Modules
-          command: rm -rf node_modules
       # Restore local dependencies from cache
       - restore_cache:
           keys:
