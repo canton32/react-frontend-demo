@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import MediaQuery from 'react-responsive'
 import Modal from 'react-responsive-modal'
 import ProductPreview from './components/ProductPreview'
 import PartnerBankTable from './components/PartnerBankTable'
@@ -105,12 +106,14 @@ class PartnerBankAccounts extends Component {
     return (
       <div className='PartnerBankAccounts'>
         <div className='PartnerBankAccountsWrapper'>
-          <div className='ProductPreviewWrapper'>
-            <div className='SubTitle'>My Numeos product</div>
-            <ProductPreview />
-          </div>
+          <MediaQuery minWidth={769}>
+            <div className='ProductPreviewWrapper'>
+              <div className='SubTitle'>My Numeos product</div>
+              <ProductPreview />
+            </div>
+          </MediaQuery>
           <div className='PartnerBankTableWrapper'>
-            <div className='SubTitle'>Partner bank accounts to be opened</div>
+            <div className='SubTitle'>We will open the following accounts</div>
             <PartnerBankTable
               onClickViewAccountDetails={this.onClickViewAccountDetails}
               onChangeCheckBox={this.onChangeCheckBox}
@@ -118,7 +121,7 @@ class PartnerBankAccounts extends Component {
             <div className='OptionalDirectDebitWrapper'>
               <div className='OptionalDirectDebit'>Optional Direct Debit</div>
               <div className='OptionalDirectDebitCheckItem'>
-                <div>Allow use of <span className='hyperlink'>Direct Debit</span> to collect these amounts from your nominated account to the new accounts. Otherwise you will have to arrange the transfers manually.</div>
+                <div>Allow use of <span className='hyperlink'>Direct Debit</span> to collect these amounts from your nominated account to the new accounts.</div>
                 <CheckBox onChange={this.onChangeDirectDebit} checked={is_direct_debit} />
               </div>
             </div>

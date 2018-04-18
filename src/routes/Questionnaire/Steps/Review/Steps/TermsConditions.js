@@ -93,7 +93,7 @@ class TermsConditions extends Component {
                 <CheckBox onChange={e => this.onChangeCheck(0, e.target.checked)} />
               </div>
               <div className='TermsConditionsCheckItem'>
-                <div>I hereby confirm that I have read and accept the Terms and Conditions of Numeos Limited (<span className='hyperlink'>available here</span>). Additionally, I authorize Numeos Limited to forward my account opening details and identify me with the chosen partner banks. Once those accounts have been successfully opened, I authorize Numeos Limited to initiate the transfer of funds I wish to deposit to those accounts.</div>
+                <div>I hereby confirm that I have read and accept the Terms and Conditions of Numeos Limited (<span className='hyperlink'>available here</span>).</div>
                 <CheckBox onChange={e => this.onChangeCheck(1, e.target.checked)} />
               </div>
             </div>
