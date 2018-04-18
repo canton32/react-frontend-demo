@@ -15,15 +15,15 @@ class ExistingBank extends Component {
       const { bank_code, bank_account_number, bank_account_holder } = customer_account
 
       this.state = {
-        sort_code: bank_code || '',
-        account_number: bank_account_number || '',
-        account_holder_name: bank_account_holder || ''
+        sort_code: bank_code || '403020',
+        account_number: bank_account_number || '78563412',
+        account_holder_name: bank_account_holder || 'MR JOHN SMITH'
       }
     } else {
       this.state = {
-        sort_code: '',
-        account_number: '',
-        account_holder_name: ''
+        sort_code: '403020',
+        account_number: '78563412',
+        account_holder_name: 'MR JOHN SMITH'
       }
     }
   }
