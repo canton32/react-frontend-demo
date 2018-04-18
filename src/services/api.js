@@ -122,6 +122,15 @@ export const Rest = {
     return request('signup/2fa/verification/', 'POST', param, apiToken)
   },
 
+  signin: (email, password) => {
+    const param = {
+      email,
+      password,
+    }
+
+    return request('signin/', 'POST', param, null)
+  },
+
   getScoring: () => {
     return request('scoring/', 'GET', null, apiToken)
   },

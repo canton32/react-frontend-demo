@@ -10,24 +10,20 @@ class Welcome extends Component {
     super(props)
 
     this.state = {
-      verified: props.user.is_email_verified
+      verified: true
     }
   }
 
   componentDidMount () {
-    const id = this.props.params.id
-    if (id != 'verify' && !this.state.verified) this.doVerify(id)
+    this.doDemoSignin()
   }
 
-  doVerify = (id) => {
-    const props = this.props
-
-    Rest.signupVerification(id).then(res => {
-      props.setWelcomeKey(id)
-      props.saveUser(res.data)
-      this.setState({
-        verified: true
-      })
+  doDemoSignin = () => {
+    Rest.signin('user22@numeos.com', 'test').then(res => {
+      this.props.saveUser(res.data)
+      return Rest.getMeInfo()
+    }).then(res => {
+      this.props.saveUser(res.data)
     }).catch(error => {
       alert(error.message || 'Something went wrong!')
     })
@@ -71,21 +67,23 @@ class Welcome extends Component {
       <div className='Welcome'>
         <div className='WelcomeWrapper'>
           {
-            props.params.id == 'verify'
-              ? <div className='Form'>
-                <div className='Title'>Welcome to the Numeos account builder</div>
-                <div className='SubTitle NotVerified'>Thanks. The validation email has been sent to you <span className='Email'>{props.user.email}</span>. Please click on the link contained in it to confirm your email and to continue the registration.</div>
-                <div className='SubTitle'>Didn’t get the email? <span className='TryAgain'>Try again</span></div>
+            // props.params.id == 'verify'
+            //   ?
+            //   <div className='Form'>
+            //     <div className='Title'>Welcome to the Numeos account builder</div>
+            //     <div className='SubTitle NotVerified'>Thanks. The validation email has been sent to you <span className='Email'>{props.user.email}</span>. Please click on the link contained in it to confirm your email and to continue the registration.</div>
+            //     <div className='SubTitle'>Didn’t get the email? <span className='TryAgain'>Try again</span></div>
+            //   </div>
+            //   :
+            <div className='Form'>
+              <div className='Title'>Welcome to the Numeos account builder</div>
+              <div>
+                <div className='SubTitle Verified'>To get started, we recommend a short 2 minute questionnaire. Our customers say it helps a lot to configure the savings account most suited to you and your objectives.</div>
+                {verified && <div className='Button' style={{ marginTop: 24 }} onClick={this.handleToQuestionnaire}>START WITH QUESTIONS</div>}
+                <div className='SubTitle CustomTitle'>Or you can jump directly to building your savings account.</div>
+                {verified && <div className='Button White' onClick={this.handleToAccountSimulator}>GO STRAIGHT TO THE ACCOUNT BUILDER</div>}
               </div>
-              : <div className='Form'>
-                <div className='Title'>Welcome to the Numeos account builder</div>
-                <div>
-                  <div className='SubTitle Verified'>To get started, we recommend a short 2 minute questionnaire. Our customers say it helps a lot to configure the savings account most suited to you and your objectives.</div>
-                  {verified && <div className='Button' style={{ marginTop: 24 }} onClick={this.handleToQuestionnaire}>START WITH QUESTIONS</div>}
-                  <div className='SubTitle CustomTitle'>Or you can jump directly to building your savings account.</div>
-                  {verified && <div className='Button White' onClick={this.handleToAccountSimulator}>GO STRAIGHT TO THE ACCOUNT BUILDER</div>}
-                </div>
-              </div>
+            </div>
           }
         </div>
         <div className={'Footer'}>
@@ -103,7 +101,6 @@ Welcome.propTypes = {
   user: PropTypes.object,
   saveQuestions: PropTypes.func.isRequired,
   saveUser: PropTypes.func.isRequired,
-  setWelcomeKey: PropTypes.func.isRequired,
   saveProducts: PropTypes.func.isRequired,
   saveOffers: PropTypes.func.isRequired
 }
@@ -111,7 +108,6 @@ Welcome.propTypes = {
 const mapDispatchToProps = {
   saveDefaultScoring: ScoringActions.setDefaultScoring,
   saveQuestions: ScoringActions.saveQuestions,
-  setWelcomeKey: UserActions.setWelcomeKey,
   saveUser: UserActions.saveUser,
   saveProducts: ProductActions.saveProducts,
   saveOffers: OfferActions.saveOffers

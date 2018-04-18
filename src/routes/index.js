@@ -1,6 +1,6 @@
 // We only need to import the modules necessary for initial render
 import CoreLayout from '../layouts/PageLayout/PageLayout'
-import AuthView from './AuthView'
+// import AuthView from './AuthView'
 import Welcome from './Welcome'
 import Questionnaire from './Questionnaire'
 
@@ -12,17 +12,17 @@ export const createRoutes = {
   component   : CoreLayout,
   indexRoute  : {
     path: '',
-    component: AuthView
+    component: Welcome
   },
   childRoutes : [
     {
       path: '',
-      component: AuthView
-    },
-    {
-      path: 'welcome/:id',
       component: Welcome
     },
+    // {
+    //   path: 'welcome/:id',
+    //   component: Welcome
+    // },
     {
       path: 'questionnaire',
       component: Questionnaire
