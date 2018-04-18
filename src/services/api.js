@@ -136,7 +136,13 @@ export const Rest = {
   },
 
   postScoring: (answers) => {
-    return request(`scoring/`, 'POST', answers, apiToken)
+    return new Promise((resolve, reject) => {
+      request(`scoring/`, 'POST', answers, apiToken).then(() => {
+        resolve()
+      }).catch(() => {
+        resolve()
+      })
+    })
   },
 
   getProduct: (id) => {

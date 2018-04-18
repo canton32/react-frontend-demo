@@ -221,7 +221,10 @@ class Questions extends Component {
 
         props.setIsBuildingAccount(true)
         Rest.postScoring(postData).then(res => {
-          props.saveAnswers(res.data)
+          // props.saveAnswers(res.data)
+          props.saveAnswers({
+            data: postData
+          })
           return Rest.getProducts()
         }).then(res => {
           props.saveProducts(res.data)
