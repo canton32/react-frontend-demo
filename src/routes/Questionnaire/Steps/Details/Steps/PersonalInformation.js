@@ -13,7 +13,7 @@ class PersonalInformation extends Component {
     const { title, gender, birthdate, address } = props.user.customer_user
 
     this.state = {
-      title: title || '',
+      title: title || 'Mr',
       firstName: first_name || '',
       lastName: last_name || '',
       gender: gender || 0,

@@ -29,10 +29,6 @@ class Welcome extends Component {
     })
   }
 
-  handleClick = (props, state) => {
-    console.log(props)
-  }
-
   handleToQuestionnaire = () => {
     const props = this.props
 
@@ -60,7 +56,6 @@ class Welcome extends Component {
   }
 
   render () {
-    const props = this.props
     const { verified } = this.state
 
     return (
@@ -84,12 +79,6 @@ class Welcome extends Component {
                 {verified && <div className='Button White' onClick={this.handleToAccountSimulator}>GO STRAIGHT TO THE ACCOUNT BUILDER</div>}
               </div>
             </div>
-          }
-        </div>
-        <div className={'Footer'}>
-          {
-            props.user ? null
-              : <a className='Next Button' onClick={() => { this.handleClick(props, this.state) }}>Verify</a>
           }
         </div>
       </div >

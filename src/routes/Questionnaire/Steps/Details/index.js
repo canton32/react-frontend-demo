@@ -17,7 +17,7 @@ class Details extends Component {
     const { startAtFirstDetail } = props
 
     this.state = {
-      currentStep: startAtFirstDetail ? 0 : 3
+      currentStep: startAtFirstDetail ? 2 : 3
     }
   }
 
