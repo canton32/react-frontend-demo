@@ -6,6 +6,7 @@
     background-position: right center;
     margin-left: 90px;
     padding-top: 112px;
+    padding-bottom: 60px;
     @media (min-width: 1024px) {
       height: 584px;
     }
@@ -13,9 +14,11 @@
       margin-left: 0;
       background-image: none;
       padding-top: 21px;
+      padding-bottom: 40px;
     }
     @media (max-width: 360px) {
       padding-top: 5px;
+      padding-bottom: 30px;
     }
     .Form {
       max-width: 551px;
