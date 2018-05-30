@@ -97,7 +97,7 @@ class AccountBuilder extends Component {
     let selection = []
 
     Object.keys(products).forEach((productId) => {
-      if (modal['product-' + productId]) selection.push(productId)
+      if (modal['product-' + productId]) selection.push(products[productId])
     })
 
     return selection.length == 2
@@ -111,7 +111,7 @@ class AccountBuilder extends Component {
     let selection = []
     const { modal } = state
     Object.keys(products).forEach((productId) => {
-      if (modal['product-' + productId]) selection.push(productId)
+      if (modal['product-' + productId]) selection.push(products[productId])
     })
     if (selection.length < 2 || (selection.length == 2 && !data.target.checked)) {
       modal[id] = data.target.checked
