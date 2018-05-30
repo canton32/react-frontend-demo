@@ -19,8 +19,8 @@ export const Util = {
   },
 
   buildPP: (products, selection) => {
-    const product1 = products[selection[0]]
-    const product2 = products[selection[1]]
+    const product1 = selection[0]
+    const product2 = selection[1]
 
     let pp = {}
     if (product1.type !== product2.type) {

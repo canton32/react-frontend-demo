@@ -33,8 +33,8 @@ class AccountBuilder extends Component {
     const productPercent = (pp[11].id === offer.positions[0].product) ? parseFloat(offer.positions[0].amount) / amount : parseFloat(offer.positions[1].amount) / amount
 
     let modal = {}
-    selection.forEach((productId, index) => {
-      modal['product-' + productId] = true
+    selection.forEach((product, index) => {
+      modal['product-' + product.id] = true
     })
 
     const { objective } = answers.data
@@ -195,8 +195,8 @@ class AccountBuilder extends Component {
     let selection = [pp[22].id, pp[11].id]
 
     let modal = {}
-    selection.forEach((productId, index) => {
-      modal['product-' + productId] = true
+    selection.forEach((product, index) => {
+      modal['product-' + product.id] = true
     })
 
     this.setState({
