@@ -84,7 +84,7 @@ class AccountBuilder extends Component {
     const { modal } = state
     let selection = []
     Object.keys(products).forEach((productId) => {
-      if (modal['product-' + productId]) selection.push(productId)
+      if (modal['product-' + productId]) selection.push(products[productId])
     })
     this.setProducts(selection)
     this.handleClose()
